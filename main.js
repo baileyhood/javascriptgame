@@ -40,24 +40,12 @@ var bruceChoiceList = {
 //VARIABLES
 var congratsMessage = "Congratulations! You won the game. Please play again to see other outcomes.";
 var losingMessage = "Too bad...better luck next time.";
-//FUNCTIONS
-var notOptionMessage = function() {
-  alert("That's not an option. You lose!");
-};
-var beginGameAgain = function() {
-  var lastQuestion = prompt("Do you want to play again? Yes or no?").toLowerCase();
-  if (lastQuestion === 'yes') {
-    console.log("Starts the game over");
-    beginGame();
-  } else {
-    alert("That's ok. Thanks for playing!");
-  }
-};
+
 //BEGININNG OF GAME
-var beginGame = function() {
+  function beginGame () {
   var name = prompt("What is your name?");
   console.log(name);
-  if (name !== 'null') {
+  if (name !== null) {
     confirm("Thanks " + name + "!" + " Lets play the game!");
   } else {
     prompt("You did not enter your name. Please enter your name.");
@@ -68,6 +56,7 @@ var beginGame = function() {
     alert("You're old enough! Play on");
   } else {
     alert("You're too young to play!");
+    beginGameAgain();
   }
   //CHARACTER CHOICE QUESTION
   var answer = prompt(
@@ -200,5 +189,20 @@ var beginGame = function() {
   } else {
     notOptionMessage();
   }
-};
+}
 beginGame();
+
+
+//FUNCTIONS
+  function notOptionMessage () {
+  alert("That's not an option. You lose!");
+}
+  function beginGameAgain() {
+  var lastQuestion = prompt("Do you want to play again? Yes or no?").toLowerCase();
+  if (lastQuestion === 'yes') {
+    console.log("Starts the game over");
+    beginGame();
+  } else {
+    alert("That's ok. Thanks for playing!");
+  }
+}
