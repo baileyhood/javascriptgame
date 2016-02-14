@@ -1,3 +1,28 @@
+//FUNCTIONS
+function notOptionMessage () {
+  alert("That's not an option. You lose!");
+}
+
+function beginGameAgain() {
+  var lastQuestion = prompt("Do you want to play again? Yes or no?").toLowerCase();
+  if (lastQuestion === 'yes') {
+    console.log("Starts the game over");
+    beginGame();
+  } else {
+    alert("That's ok. Thanks for playing!");
+  }
+}
+
+function lostGameMessage () {
+  alert ("Too bad...better luck next time.");
+  beginGameAgain();
+}
+
+function winGameMessage () {
+  alert ("Congratulations! You won the game. Please play again to see other outcomes.");
+  beginGameAgain();
+}
+
 //OBJECTS
 var choices = {
   arnoldChoice: "You chose Arnold! Decide what move to make: 1. Punch 2. Bodyslam 3. Bitchslap",
@@ -68,38 +93,38 @@ var losingMessage = "Too bad...better luck next time.";
     if (answer === '1' || answer === 'punch' || answer === '1. punch') {
       answer = prompt(arnoldChoiceList.arnoldPunch).toLowerCase();
       if (answer === '1' || answer === 'shoot' || answer === '1. shoot') {
-        alert(arnoldChoiceList.arnoldShoot + losingMessage);
-        beginGameAgain();
+        alert(arnoldChoiceList.arnoldShoot);
+        lostGameMessage ();
       } else if (answer === '2' || answer === 'run' || answer === '2. run') {
-        alert(arnoldChoiceList.arnoldRun + losingMessage);
-        beginGameAgain();
+        alert(arnoldChoiceList.arnoldRun);
+        lostGameMessage ();
       } else if (answer === '3' || answer === 'shake hands' || answer === "3. shake hands") {
-        alert(arnoldChoiceList.arnoldShakeHands + congratsMessage);
-        beginGameAgain();
+        alert(arnoldChoiceList.arnoldShakeHands);
+        winGameMessage ();
       }
     } else if (answer === '2' || answer === 'bodyslam' || answer === '2. bodyslam') {
       answer = prompt(arnoldChoiceList.arnoldBodySlam).toLowerCase();
       if (answer === '1' || answer === 'shoot' || answer === '1. shoot') {
-        alert(arnoldChoiceList.arnoldShoot + losingMessage);
-        beginGameAgain();
+        alert(arnoldChoiceList.arnoldShoot);
+        lostGameMessage ();
       } else if (answer === '2' || answer === 'run' || answer === '2. run') {
-        alert(arnoldChoiceList.arnoldRun + losingMessage);
-        beginGameAgain();
+        alert(arnoldChoiceList.arnoldRun);
+        lostGameMessage ();
       } else if (answer === '3' || answer === 'shake hands' || answer === "3. shake hands") {
-        alert(arnoldChoiceList.arnoldShakeHands + congratsMessage);
-        beginGameAgain();
+        alert(arnoldChoiceList.arnoldShakeHands);
+        winGameMessage ();
       }
     } else if (answer === '3' || answer === 'bitchslap' || answer === '3. bitchslap') {
       answer = prompt(arnoldChoiceList.arnoldBitchslap).toLowerCase();
       if (answer === '1' || answer === 'shoot' || answer === '1. shoot') {
-        alert(arnoldChoiceList.arnoldShoot + losingMessage);
-        beginGameAgain();
+        alert(arnoldChoiceList.arnoldShoot);
+        lostGameMessage ();
       } else if (answer === '2' || answer === 'run' || answer === '2. run') {
-        alert(arnoldChoiceList.arnoldRun + losingMessage);
-        beginGameAgain();
+        alert(arnoldChoiceList.arnoldRun);
+        lostGameMessage ();
       } else if (answer === '3' || answer === 'shake hands' || answer === "3. shake hands") {
-        alert(arnoldChoiceList.arnoldShakeHands + congratsMessage);
-        beginGameAgain();
+        alert(arnoldChoiceList.arnoldShakeHands);
+        winGameMessage ();
       }
     }
   }
@@ -110,38 +135,38 @@ var losingMessage = "Too bad...better luck next time.";
     if (answer === '1' || answer === 'hook' || answer === '1. hook') {
       answer = prompt(sylvesterChoiceList.sylvesterHook).toLowerCase();
       if (answer === '1' || answer === "uppercut" || answer === "1. uppercut") {
-        alert(sylvesterChoiceList.sylvesterUppercut + losingMessage);
-        beginGameAgain();
+        alert(sylvesterChoiceList.sylvesterUppercut);
+        lostGameMessage ();
       } else if (answer === '2' || answer === "point away" || answer === "1. point away") {
-        alert(sylvesterChoiceList.sylvesterPointAway + congratsMessage);
-        beginGameAgain();
+        alert(sylvesterChoiceList.sylvesterPointAway);
+        winGameMessage ();
       } else if (answer === '3' || answer === "cartwheel" || answer === "3. cartwheel") {
-        alert(sylvesterChoiceList.sylvesterCartwheel + losingMessage);
-        beginGameAgain();
+        alert(sylvesterChoiceList.sylvesterCartwheel);
+        lostGameMessage ();
       }
     } else if (answer === '2' || answer === 'jab' || answer === '2. jab') {
       answer = prompt(sylvesterChoiceList.sylvesterJap).toLowerCase();
       if (answer === '1' || answer === "uppercut" || answer === "1. uppercut") {
-        alert(sylvesterChoiceList.sylvesterUppercut + losingMessage);
-        beginGameAgain();
+        alert(sylvesterChoiceList.sylvesterUppercut);
+        lostGameMessage ();
       } else if (answer === '2' || answer === "point away" || answer === "1. point away") {
-        alert(sylvesterChoiceList.sylvesterPointAway + congratsMessage);
-        beginGameAgain();
+        alert(sylvesterChoiceList.sylvesterPointAway);
+        winGameMessage ();
       } else if (answer === '3' || answer === "cartwheel" || answer === "3. cartwheel") {
-        alert(sylvesterChoiceList.sylvesterCartwheel + losingMessage);
-        beginGameAgain();
+        alert(sylvesterChoiceList.sylvesterCartwheel);
+        lostGameMessage ();
       }
     } else if (answer === '3' || answer === 'straight punch' || answer === '3. straight punch') {
       answer = prompt(sylvesterChoiceList.sylvesterStraightPunch).toLowerCase();
       if (answer === '1' || answer === "forfeit" || answer === "1. forfeit") {
-        alert(sylvesterChoiceList.sylvesterForfeit + losingMessage);
-        beginGameAgain();
+        alert(sylvesterChoiceList.sylvesterForfeit);
+        lostGameMessage ();
       } else if (answer === '2' || answer === "counter moves" || answer === "2. counter moves") {
-        alert(sylvesterChoiceList.sylvesterCountermove + losingMessage);
-        beginGameAgain();
+        alert(sylvesterChoiceList.sylvesterCountermove);
+        lostGameMessage ();
       } else if (answer === '3' || answer === "dance" || answer === "3. dance") {
-        alert(sylvesterChoiceList.sylvesterDance + congratsMessage);
-        beginGameAgain();
+        alert(sylvesterChoiceList.sylvesterDance);
+        winGameMessage ();
       }
     }
   }
@@ -152,38 +177,38 @@ var losingMessage = "Too bad...better luck next time.";
     if (answer === '1' || answer === 'kick' || answer === '1. kick') {
       answer = prompt(bruceChoiceList.bruceKick).toLowerCase();
       if (answer === '1' || answer === "scream" || answer === "1. scream") {
-        alert(bruceChoiceList.bruceScream + losingMessage);
-        beginGameAgain();
+        alert(bruceChoiceList.bruceScream);
+        lostGameMessage ();
       } else if (answer === '2' || answer === "run" || answer === "1. run") {
-        alert(bruceChoiceList.bruceRun + losingMessage);
-        beginGameAgain();
+        alert(bruceChoiceList.bruceRun);
+        lostGameMessage ();
       } else if (answer === '3' || answer === "cry" || answer === "3. cry") {
-        alert(bruceChoiceList.bruceCry + congratsMessage);
-        beginGameAgain();
+        alert(bruceChoiceList.bruceCry);
+        winGameMessage ();
       }
     } else if (answer === '2' || answer === 'nunchucks' || answer === '2. nunchucks') {
       answer = prompt(bruceChoiceList.bruceNunchuck).toLowerCase();
       if (answer === '1' || answer === "slap" || answer === "1. slap") {
-        alert(bruceChoiceList.bruceSlap + losingMessage);
-        beginGameAgain();
+        alert(bruceChoiceList.bruceSlap);
+        lostGameMessage ();
       } else if (answer === '2' || answer === "kick" || answer === "1. kick") {
-        alert(bruceChoiceList.bruceKick2 + congratsMessage);
-        beginGameAgain();
+        alert(bruceChoiceList.bruceKick2);
+        winGameMessage ();
       } else if (answer === '3' || answer === "push" || answer === "3. push") {
-        alert(bruceChoiceList.brucePush + losingMessage);
-        beginGameAgain();
+        alert(bruceChoiceList.brucePush);
+        lostGameMessage ();
       }
     } else if (answer === '3' || answer === 'smack' || answer === '3. smack') {
       answer = prompt(bruceChoiceList.bruceSmack).toLowerCase();
       if (answer === '1' || answer === "dodge" || answer === "3. dodge") {
-        alert(bruceChoiceList.bruceDodge + losingMessage);
-        beginGameAgain();
+        alert(bruceChoiceList.bruceDodge);
+        lostGameMessage ();
       } else if (answer === '2' || answer === "run" || answer === "3. run") {
-        alert(bruceChoiceList.bruceRun2 += losingMessage);
-        beginGameAgain();
+        alert(bruceChoiceList.bruceRun2);
+        lostGameMessage ();
       } else if (answer === '3' || answer === "play dead" || answer === "3. play dead") {
-        alert(bruceChoiceList.brucePlayDead + congratsMessage);
-        beginGameAgain();
+        alert(bruceChoiceList.brucePlayDead);
+        winGameMessage ();
       }
     }
   } else {
@@ -191,18 +216,3 @@ var losingMessage = "Too bad...better luck next time.";
   }
 }
 beginGame();
-
-
-//FUNCTIONS
-  function notOptionMessage () {
-  alert("That's not an option. You lose!");
-}
-  function beginGameAgain() {
-  var lastQuestion = prompt("Do you want to play again? Yes or no?").toLowerCase();
-  if (lastQuestion === 'yes') {
-    console.log("Starts the game over");
-    beginGame();
-  } else {
-    alert("That's ok. Thanks for playing!");
-  }
-}
